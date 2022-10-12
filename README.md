@@ -75,10 +75,10 @@ Made with **LOVE**❤ by PumpkinJui
 
 - 本程序使用 [LXGW Bright GB](https://github.com/lxgw/LxgwBright) 字体，至少需要系统内安装有该字体的 Regular 字重才可以正常显示。
   
-  - 如果安装了该字体家族但未安装该字重，程序将自动使用该字体家族的另外一个字重替代显示。
+  - 如果安装了该字体家族但未安装该字重，程序将自动使用该字体家族的另外一个字重替代显示。  
     *尚不确定程序如何选择该字重。*
   
-  - 如果未安装该字体家族，程序将自动使用系统内的某个字体来替代显示。
+  - 如果未安装该字体家族，程序将自动使用系统内的某个字体来替代显示。  
     *尚不确定程序如何选择该字体。*
 
 - 如果您想要询问任何问题、提出任何建议或汇报任何漏洞，请在 [本项目的 Issues 页面](https://github.com/PumpkinJui/Selector/issues) 反馈，或 [发邮件到 feedback@pumpkinjui.aleeas.com](mailto:feedback@pumpkinjui.aleeas.com)。
