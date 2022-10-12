@@ -10,11 +10,11 @@ Made with **LOVE**❤ by PumpkinJui
 
 - Internal：为满足我自己使用需求而制作的版本。
 
-- Public：适用于绝大多数人的绝大多数需求的推广版本。
+- Public：适用于更多人的推广版本。
 
 - Version 1.0 Release 仅包含 Internal 版本。
 
-## 使用方法
+## 使用说明
 
 1. 下载程序。可以在 [本项目的 Releases 页面](https://github.com/PumpkinJui/Selector/releases) 下载打包的 EXE 版本。
 
@@ -28,15 +28,10 @@ Made with **LOVE**❤ by PumpkinJui
        
        - 列表中的所有空格将会正常显示。
          即，形如 “a b” 和 “ab     ” 的元素将会按它们现在的样子显示。
-       
-       - 这是一个拥有四个元素的名称列表示例文件：
-         
-         > 0
-         > 1
-         > 2
-         > 3
      
-     - 如果您没有给出名称列表，程序将自动使用一个包含 0~9 十个整数的列表运行。
+     - 如果您没有给出名称列表，程序将自动使用一个包含 0~9 十个整数的备用列表运行。
+     
+     - 由于未知原因，Windows 11 系统会自动使用备用列表运行。另见 [Issue #6](https://github.com/PumpkinJui/Selector/issues/6)。
    
    - 对于 Internal 版本：
      名称列表已被直接写入程序代码中——您没有选择。
@@ -58,17 +53,27 @@ Made with **LOVE**❤ by PumpkinJui
 
 ### Version 1.0 Release
 
-使用在 64 位的 Windows 7 系统上运行的 [PyInstaller v5.4.1](https://github.com/pyinstaller/pyinstaller/releases/tag/v5.4.1) 打包，并且至少兼容 64 位的 Windows 7 系统及 64 位的 Windows 10 系统。
+- 使用在 64 位的 Windows 7 系统上运行的 [PyInstaller v5.4.1](https://github.com/pyinstaller/pyinstaller/releases/tag/v5.4.1) 打包。
+
+- 仅兼容 Windows 系统，且不兼容 32 位系统。
+
+- 兼容 64 位的 Windows 7 系统及 64 位的 Windows 10 系统。
 
 ### Version 1.1 Release
 
-使用在 64 位的 Windows 10 系统上运行的 [PyInstaller v5.5](https://github.com/pyinstaller/pyinstaller/releases/tag/v5.5) 打包，并且至少兼容 64 位的 Windows 10 系统。
+- 使用在 64 位的 Windows 10 系统上运行的 [PyInstaller v5.5](https://github.com/pyinstaller/pyinstaller/releases/tag/v5.5) 打包。
+
+- 仅兼容 Windows 系统，且不兼容 32 位系统。
+
+- 兼容 64 位的 Windows 10 系统。
+
+- 不兼容 64 位的 Windows 11 系统。
 
 ## 其他
 
 - 本程序使用 Python 3 语言编写，遵守 MIT License 开源发布。该许可证可以在本项目中找到。
 
-- 使用 [LXGW Bright GB](https://github.com/lxgw/LxgwBright) 字体，至少需要系统内安装有该字体的 Regular 字重才可以正常使用。
+- 本程序使用 [LXGW Bright GB](https://github.com/lxgw/LxgwBright) 字体，至少需要系统内安装有该字体的 Regular 字重才可以正常显示。
   
   - 如果安装了该字体家族但未安装该字重，程序将自动使用该字体家族的另外一个字重替代显示。
     *尚不确定程序如何选择该字重。*
@@ -76,4 +81,4 @@ Made with **LOVE**❤ by PumpkinJui
   - 如果未安装该字体家族，程序将自动使用系统内的某个字体来替代显示。
     *尚不确定程序如何选择该字体。*
 
-- 如果您发现了任何问题或想要提出任何建议，请在 [本项目的 Issues 页面](https://github.com/PumpkinJui/Selector/issues) 反馈，或 [发邮件到 feedback@pumpkinjui.aleeas.com](mailto:feedback@pumpkinjui.aleeas.com)。
+- 如果您想要询问任何问题、提出任何建议或汇报任何漏洞，请在 [本项目的 Issues 页面](https://github.com/PumpkinJui/Selector/issues) 反馈，或 [发邮件到 feedback@pumpkinjui.aleeas.com](mailto:feedback@pumpkinjui.aleeas.com)。
