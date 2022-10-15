@@ -1,6 +1,6 @@
 # Selector
 
-Made with **LOVE**❤ by PumpkinJui
+Made with **TRUE LOVE**❤ by PumpkinJui
 
 > A simple program which can randomly select one name in a name list.
 > 
@@ -10,7 +10,7 @@ Made with **LOVE**❤ by PumpkinJui
 
 - Internal：为满足我自己使用需求而制作的版本。
 - Public：适用于更多人的推广版本。
-- Version 1.0 Release 仅包含 Internal 版本。
+- Version 1.0 Release 和 Version 1.3 Release 仅包含 Internal 版本。
 
 ## 使用说明
 
@@ -19,6 +19,10 @@ Made with **LOVE**❤ by PumpkinJui
 2. - 对于 Public 版本：
      
      - 如果您需要给出名称列表，请在程序的目录下新建一个 list.txt 文件，然后将列表写入。每一行写入列表中的一个元素。
+       
+       - list.txt 文件仅支持 ANSI 编码和 UTF-8 编码。
+       
+       - list.txt 文件不应为空。
        
        - 列表读取后将会在程序内部自动去重。
        
@@ -35,6 +39,8 @@ Made with **LOVE**❤ by PumpkinJui
          > 3
      
      - 如果您没有给出名称列表，程序将自动使用一个包含 0~9 十个整数的备用列表运行。
+     
+     - 如果您给出的 list.txt 文件为空，或使用的不是 ANSI 编码或 UTF-8 编码，程序将会弹出一个消息框，然后自动使用上述备用列表运行。
    
    - 对于 Internal 版本：
      名称列表已被直接写入程序代码中 —— 您没有选择。
@@ -76,13 +82,13 @@ Made with **LOVE**❤ by PumpkinJui
 
 - 开发者测试结果，兼容 64 位的 Windows 7 系统、64 位的 Windows 10 系统和 64 位的 Windows 11 系统。
 
-### Version 1.1 Release & Version 1.2 Release
+### Version 1.1 Release ~ Version 1.3 Release
 
 - 使用在 64 位的 Windows 10 系统上运行的 [PyInstaller v5.5](https://github.com/pyinstaller/pyinstaller/releases/tag/v5.5) 打包。
 
 - 仅兼容 Windows 系统，且不兼容 32 位系统。
 
-- 开发者测试结果，兼容 64 位的 Windows 7 系统、64 位的 Windows 10 系统和 64 位的 Windows 11 系统。
+- 开发者测试结果，兼容 64 位的 Windows 10 系统和 64 位的 Windows 11 系统。
 
 ## 其他
 
