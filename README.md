@@ -10,7 +10,8 @@ Made with **TRUE LOVE**❤ by PumpkinJui
 
 - Internal：为满足我自己使用需求而制作的版本。
 - Public：适用于更多人的推广版本。
-- Version 1.0 Release 和 Version 1.3 Release 仅包含 Internal 版本。
+- Version 1.0 Release 仅包含 Internal 版本。
+- Version 1.3 Release 仅包含 Public 版本。
 
 ## 使用说明
 
