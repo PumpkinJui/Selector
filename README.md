@@ -8,10 +8,24 @@ Made with **TRUE LOVE**❤ by PumpkinJui
 
 ## 程序版本
 
+### Releases
+
 - Internal：为满足我自己使用需求而制作的版本。
 - Public：适用于更多人的推广版本。
 - Version 1.0 Release 仅包含 Internal 版本。
 - Version 1.3 Release 仅包含 Public 版本。
+
+### Testers
+
+- Version 1.2 SL1.2-EXPModule：用于测试 fileread 中 if-else 结构效果与 try-except 结构效果的模块。
+
+- Version 1.3.1 Public Tester：用于测试 fileread 结果的带命令行版本，由 1.3 Public 衍生。
+
+### ???
+
+- 由 Release-Internal 衍生的恶搞版本。
+
+- ~~*为了防止我同学把这些拿到班级里用，*~~ 仅在仓库中存放 .py 文件版本。
 
 ## 使用说明
 
@@ -95,6 +109,11 @@ Made with **TRUE LOVE**❤ by PumpkinJui
 
 - 本程序使用 Python 3 语言编写，遵守 MIT License 开源发布。该许可证可以在本项目中找到。
 
+- 本程序不含病毒，没有任何恶意代码，但 360 可能会进行误报 (类似 HEUR/QVM202.0.424F.Malware.Gen)。如果您电脑上安装了 360，请确保本程序已被加入白名单。
+
+- 本程序 Public 版本的文件读取 (fileread) 逻辑可以在 [这里](https://github.com/PumpkinJui/Selector/tree/main/Tools%26EXPs/fileread) 找到。  
+  *我知道这个流程图基本没有按照一般规则来写，但我觉得吧…… 什么平行四边形表示输入输出、什么菱形表示判断都赶紧去一边去吧~~，我实在懒得一点一点修了~~*
+
 - 本程序使用 [LXGW Bright GB](https://github.com/lxgw/LxgwBright) 字体，至少需要系统内安装有该字体的 Regular 字重才可以正常显示。
   
   - 如果安装了该字体家族但未安装该字重，程序将自动使用该字体家族的另外一个字重替代显示。  
@@ -104,6 +123,8 @@ Made with **TRUE LOVE**❤ by PumpkinJui
   - 如果未安装该字体家族，程序将自动使用系统内的某个字体来替代显示。  
     
     *尚不确定程序如何选择该字体。*
+
+- 用于正常使用的，一般没有必要下载仓库中 Testers 和 ??? 两文件夹中存放的文件。请下载 Releases 文件夹中的文件。
 
 - 其实两种 **“更具有视觉效果”** 的随机抽取，键盘的应该更具有视觉效果。因为鼠标的限制了等待时间为 1000ms，执行间隔时间为 50ms。而键盘的没有限制 (至少我没写限制代码)，应该是完全取决于硬件性能的。
 
