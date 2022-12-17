@@ -4,7 +4,7 @@
 
 > 仅适用于 Public 及其衍生版本。
 
-![fileread 逻辑图](https://github.com/PumpkinJui/Selector/blob/main/Tools%26EXPs/fileread/fileread.png)
+![fileread 逻辑图](https://github.com/PumpkinJui/Selector/blob/main/Tools%26EXPs/fileread/1.4/fileread.png)
 
 - 在本仓库中，“fileread” 特指在 Public 及其衍生版本中使用的名称列表读取行为。
 - 上图为本程序的 fileread 逻辑图。它也可以在 [这里](https://github.com/PumpkinJui/Selector/tree/main/Tools%26EXPs/fileread) 找到。  
