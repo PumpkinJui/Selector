@@ -1,7 +1,6 @@
 # Selector
 
 [![GitHub License](https://img.shields.io/github/license/PumpkinJui/Selector)](https://github.com/PumpkinJui/Selector/blob/main/LICENSE)
-
 [![GitHub Releases](https://img.shields.io/github/v/release/PumpkinJui/Selector?display_name=release&sort=date)](https://github.com/PumpkinJui/Selector/releases/latest)
 
 Made with **TRUE LOVE**❤ by PumpkinJui
@@ -73,9 +72,9 @@ Made with **TRUE LOVE**❤ by PumpkinJui
 
 - 这是一个拥有四个元素的名称列表示例文件：
 
-> 0
-> 1
-> 2
+> 0  
+> 1  
+> 2  
 > 3
 
 ### 模式使用说明
