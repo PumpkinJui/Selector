@@ -2,8 +2,10 @@
 GitHub 项目页：
 https://github.com/PumpkinJui/Selector
 当前版本：
-Selector 1.4.1 Public
+Selector 1.4.2 Public
 '''
+
+
 
 from tkinter import *
 import tkinter.font as tkf
@@ -11,11 +13,15 @@ import tkinter.messagebox as msgbx
 from pygame import mixer as m
 from random import choice,randint
 from time import sleep
+from re import sub,match
 from traceback import print_exc as exc
+
+
 
 dointro = True
 lt = []
-ltd = []
+
+
 
 def sel():# 更换新的显示内容
     global lt,intro
@@ -39,26 +45,46 @@ def sel():# 更换新的显示内容
         lab['text'] = a# 更改 Label 的显示
         mus2()# 播放最终音效
 
-def fileread(ltr):
-    global lt,ltd
+
+def ltprocess(ltr):
+    global lt
     lt = ltr.read().splitlines()
     if lt == []:# 列表为空时抛出错误
         raise TabError
-    for i in lt:# 检测所有空行和注释
-        if i == '' or i[:3] == '%%%':
-            ltd.append(i)
-    for i in ltd:# 去除所有空行和注释
-        lt.remove(i)
+    rmblank()
+
+    ltf = []# 去除注释并还原 “\#” 后的列表
+    for i in lt:
+        j = sub(r'\s*(?<!\\)#.*','',i)# 去除注释
+        k = sub(r'\\#','#',j)# 还原 “\#”
+        ltf.append(k)
+    lt = ltf
+
+    rmblank()
     if lt == []:# 不包含有效内容时抛出错误
-        raise
-    lt = set(lt)# 去重
+        raise RuntimeError
     lt = tuple(lt)
+
+
+def rmblank():
+    global lt
+    lt = set(lt)# 去重
+    lt = list(lt)
+    ltd = []# 去空白元素
+    for i in lt:
+        if match(r'^\s*$',i) != None:
+            ltd.append(i)
+    for i in ltd:
+        lt.remove(i)
+
 
 def sele(event):# 键盘适配特制
     sel()
 
+
 def exite(event):# 键盘适配特制
     win.destroy()
+
 
 def flash1():# 刷新模式选择
     manual.flash()
@@ -70,9 +96,11 @@ def flash1():# 刷新模式选择
         muson['state'] = NORMAL
         musoff['state'] = NORMAL
 
+
 def flash2():# 刷新音乐选择
     muson.flash()
     musoff.flash()
+
 
 def musload():# 判断音乐是否全部加载
     if not load1 and not load2:
@@ -80,9 +108,11 @@ def musload():# 判断音乐是否全部加载
     else:
         return True
 
+
 def mus1():# 播放中间音效
     if muson['state'] == NORMAL and mus.get() == '1' and load1:# 自动模式，音效启用，中间音效加载
         m.music.play()
+
 
 def mus2():# 播放最终音效
     sleep(0.1)
@@ -93,9 +123,11 @@ def mus2():# 播放最终音效
             sleep(0.1)
             m.music.play()# 连续三次播放中间音效，以代替未加载的最终音效
 
+
+
 try:
     ltr = open('list.txt','r')# ANSI 编码读取
-    fileread(ltr)
+    ltprocess(ltr)
 except TabError:# 列表为空
     msgbx.showwarning('非法的文件内容','您提供的 list.txt 文件为空！')
     lt = ('0','1','2','3','4','5','6','7','8','9')
@@ -105,7 +137,7 @@ except RuntimeError:# 列表处理后为空
 except UnicodeDecodeError:# 非 ANSI 编码
     try:
         ltr = open('list.txt','r',encoding='utf-8')# UTF-8 编码读取
-        fileread(ltr)
+        ltprocess(ltr)
     except TabError:# 列表为空
         msgbx.showwarning('非法的文件内容','您提供的 list.txt 文件为空！')
         lt = ('0','1','2','3','4','5','6','7','8','9')
@@ -135,6 +167,8 @@ finally:
         ltr.close()
     except:
         pass
+
+
 
 if dointro:
     intro = '''单击“抽取”按钮或按 Enter 键，以随机抽取一个姓名
@@ -170,14 +204,15 @@ bt2.grid(row=4,column=2,sticky=NSEW)# 显示按钮
 win.bind('<Return>',sele)# 绑定 Enter 键
 win.bind('<Escape>',exite)# 绑定 Esc 键
 
+
 m.init()# 音乐初始化—自动模式专享
 try:
-    m.music.load('Successful_Hit.wav')# 过程
+    m.music.load('Successful_Hit.ogg')# 过程
     load1 = True
 except:
     load1 = False
 try:
-    gt = m.Sound('Random_Levelup.wav')# 结果
+    gt = m.Sound('Random_Levelup.ogg')# 结果
     load2 = True
 except:
     load2 = False
@@ -186,10 +221,14 @@ mus = StringVar()
 mus.set(1)# 自动设置音效开
 if not musload():
     mus.set(2)# 啥都没加载，自动设置音效关
+else:
+    m.music.set_volume(0.01)# 设置音量大小为 0.01
+    gt.set_volume(0.01)# 这样即使电脑主音量开到了 50 也不会很吵
 
 muson = Radiobutton(win,text='音效开',font=ft4,value=1,variable=mus,command=flash2,state=DISABLED)
 musoff = Radiobutton(win,text='音效关',font=ft4,value=2,variable=mus,command=flash2,state=DISABLED)
 muson.grid(row=3,column=1)
 musoff.grid(row=3,column=2)# 显示单选按钮
+
 
 win.mainloop()
