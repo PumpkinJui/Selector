@@ -11,41 +11,17 @@ Made with **TRUE LOVE**❤ by PumpkinJui
 > 
 > 当前版本：Version 1.4.1 Release 230215
 
-## 程序版本
-
-### Releases
-
-- Internal：为满足我自己使用需求而制作的版本。
-- Public：适用于更多人的推广版本，自 Version 1.1 Release 起加入。
-
-### Testers
-
-- Version 1.2 SL1.2-EXPModule：用于测试 fileread 中 if-else 结构效果与 try-except 结构效果的模块。
-
-- Version 1.3.1 Public Tester：用于测试 fileread 结果的带命令行版本，由 1.3 Public 衍生。
-
-### ???
-
-- 由 Internal 衍生的恶搞版本。
-
-- ~~*为了防止我同学把这些拿到班级里用，*~~ 仅在仓库中存放 .py 格式的文件。
-
-### Releases 页面中的文件
-
-- Version 1.4 Release 前的程序仅有 .exe 格式的版本。
-- 自 Version 1.4 Release 起，引入了 .zip 格式版本的程序，用于包含所有需要的文件并减少启动耗时。字体文件也包含在该版本的程序中，位于 fonts 目录下，但仍需要手动安装。在解压缩后启动其中的 .exe 程序以运行本版本的程序。
-
 ## 使用说明
 
 1. 下载程序。可以在 [本项目的 Releases 页面](https://github.com/PumpkinJui/Selector/releases) 下载已打包的程序。
 
-2. - 对于 Public 及其衍生版本：
-     
-     - 如果您需要给出名称列表，请查看 [名称列表格式规范](#%E5%90%8D%E7%A7%B0%E5%88%97%E8%A1%A8%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83)。
-     
-     - 如果您没有给出名称列表，程序将自动使用一个包含 0~9 十个整数的备用列表运行。
-     
-     - 如果您给出的 list.txt 文件为空，或使用的不是 ANSI 编码或 UTF-8 编码，程序将会弹出一个消息框，然后自动使用上述备用列表运行。
+2. 根据您的需求给出名称列表。
+   
+   - 如果您需要给出名称列表，请查看 [名称列表格式规范](#%E5%90%8D%E7%A7%B0%E5%88%97%E8%A1%A8%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83)。
+   
+   - 如果您没有给出名称列表，程序将自动使用一个包含 0~9 十个整数的备用列表运行。
+   
+   - 如果您给出的 list.txt 文件为空，或使用的不是 ANSI 编码或 UTF-8 编码，程序将会弹出一个消息框，然后自动使用上述备用列表运行。
    
    - 对于 Internal 及其衍生版本：
      名称列表已被直接写入程序代码中 —— 您没有选择。
@@ -55,8 +31,6 @@ Made with **TRUE LOVE**❤ by PumpkinJui
 4. 您可以选择使用 “手动模式” 或 “自动模式”。
 
 ### 名称列表格式规范
-
-> 仅适用于 Public 及其衍生版本。
 
 - 请在程序的目录下新建一个 list.txt 文件，然后将列表写入。每一行写入列表中的一个元素。
 
@@ -131,15 +105,11 @@ Made with **TRUE LOVE**❤ by PumpkinJui
 
 - 打包：[PyInstaller](https://pyinstaller.org)
 
-- [fileread 逻辑图]((https://github.com/PumpkinJui/Selector/tree/main/Tools%26EXPs/fileread))：[Mermaid](https://mermaid-js.github.io)
-
 ## 其他
 
 - 本程序使用 Python 3 语言编写，遵守 MIT License 开源发布。该许可证可以在本项目中找到。
 
 - 本程序**不含病毒，没有任何恶意代码**，但 360 可能会进行误报 (类似 HEUR/QVM202.0.424F.Malware.Gen)。如果您电脑上安装了 360，请确保本程序已被加入白名单。
-
-- 用于正常使用的，一般没有必要下载仓库中 Testers 和 ??? 两文件夹中存放的文件。请下载 Releases 文件夹中的文件。
 
 - 其实两种 **“更具有视觉效果”** 的随机抽取，键盘的应该更具有视觉效果。因为鼠标的限制了等待时间为 1000ms，执行间隔时间为 50ms。而键盘的没有限制 (至少我没写限制代码)，应该是完全取决于性能的。
 

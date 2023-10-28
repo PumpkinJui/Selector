@@ -4,13 +4,7 @@
 
 ## 关于 fileread
 
-> 仅适用于 Public 及其衍生版本。
-
-![fileread 逻辑图](https://github.com/PumpkinJui/Selector/blob/main/Tools%26EXPs/fileread/1.4.1/fileread.png)
-
 - 在本仓库中，“fileread” 特指在 Public 及其衍生版本中使用的名称列表读取行为。
-- 上图为本程序的 fileread 逻辑图。它也可以在 [这里](https://github.com/PumpkinJui/Selector/tree/main/Tools%26EXPs/fileread) 找到。  
-  *我知道它基本没有按照流程图的规则来写，但我觉得…… 什么平行四边形表示输入输出、菱形表示判断都一边去吧 ~~，我实在懒得一点一点修了~~*
 
 ### 未能正常使用给定的名称列表
 
@@ -51,7 +45,7 @@
 
 ### 程序提示 “未知错误”
 
-> 仅适用于 Version 1.4 Release 及以上的 Public 版本。
+> 仅适用于 Version 1.4 Release 及以上的版本。
 
 - 这意味着程序在 fileread 中遇到了未知错误。请 [进行反馈](#%E5%8F%8D%E9%A6%88)。
 - 反馈时请附上程序自动保存的错误信息以方便排查，并最好附上一段完整的录屏以方便复现。
